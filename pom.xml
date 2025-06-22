@@ -133,12 +133,6 @@
 			</plugin>
 
 			<plugin>
-				<groupId>io.qameta.allure</groupId>
-				<artifactId>allure-maven</artifactId>
-				<version>2.11.2</version>
-			</plugin>
-			<!-- Fix Lombok with Java 17 using compiler args -->
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.11.0</version>
