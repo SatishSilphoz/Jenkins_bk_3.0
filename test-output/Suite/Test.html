@@ -1,0 +1,826 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>108/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jun 22 14:30:09 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>5998 seconds (5998807 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Add Payment in select action drop down using cash in hand or bank", "Bookkeeping CIS"</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ddd75876d950c029e34111d65d6a7406, executeScript {script=arguments[0].dispatchEvent(new Event(&apos;change&apos;, { bubbles: true })), args=[{element-6066-11e4-a52e-4f735466cecf=f.339BF4B4DE93CB82B66C899A4093AD5D.d.98BDB8FD2D00104A052A60EDB7C33F20.e.1727}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51646}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51646/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ddd75876d950c029e34111d65d6a7406
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
+	at com.Capium.Utilies.HelperClass.setValueUsingJS(HelperClass.java:156)
+	at com.Capium.Actions.Capium_Bookkeeping_CIS_Actions.EditPaymentCISAndSave(Capium_Bookkeeping_CIS_Actions.java:297)
+	at com.Capium.stepDefinations.Capium_Bookkeeping_CIS_stepdef.select_account_type_as_cis_control_account_and_enter_total_balance_amount_and_all_manditory_fields_and_click_on_save(Capium_Bookkeeping_CIS_stepdef.java:110)
+	at ✽.Select Account type as CIS Control account and Enter total balance amount and all manditory fields and click on Save(file:///D:/Core%20Modules/Capium_BK_3.0/src/test/resources/Feature_CapiumPurchase/BK_CIS.feature:46)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace839005249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace839005249'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ddd75876d950c029e34111d65d6a7406, executeScript {script=arguments[0].dispatchEvent(new Event(&apos;change&apos;, { bubbles: true })), args=[{element-6066-11e4-a52e-4f735466cecf=f.339BF4B4DE93CB82B66C899A4093AD5D.d.98BDB8FD2D00104A052A60EDB7C33F20.e.1727}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51646}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51646/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ddd75876d950c029e34111d65d6a7406
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
+	at com.Capium.Utilies.HelperClass.setValueUsingJS(HelperClass.java:156)
+	at com.Capium.Actions.Capium_Bookkeeping_CIS_Actions.EditPaymentCISAndSave(Capium_Bookkeeping_CIS_Actions.java:297)
+	at com.Capium.stepDefinations.Capium_Bookkeeping_CIS_stepdef.select_account_type_as_cis_control_account_and_enter_total_balance_amount_and_all_manditory_fields_and_click_on_save(Capium_Bookkeeping_CIS_stepdef.java:110)
+	at ✽.Select Account type as CIS Control account and Enter total balance amount and all manditory fields and click on Save(file:///D:/Core%20Modules/Capium_BK_3.0/src/test/resources/Feature_CapiumPurchase/BK_CIS.feature:46)
+</pre></div></td>
+<td>40</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Journals", "BookkeepingModule-Task"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;IsIncluded&apos;]//parent::label&quot;}
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [468607b250d353cd51122c232f39a5f0, findElement {using=xpath, value=//input[@name=&apos;IsIncluded&apos;]//parent::label}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51519}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51519/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 468607b250d353cd51122c232f39a5f0
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.Capium.Actions.Capium_Bookkeeping_Task_Actions.TickIncludingVATCheckbox(Capium_Bookkeeping_Task_Actions.java:165)
+	at com.Capium.stepDefinations.Capium_Bookkeeping_Task_Stepdef.un_tick_the_checkbox_including_vat(Capium_Bookkeeping_Task_Stepdef.java:75)
+	at ✽.UnTick the checkbox Including VAT(file:///D:/Core%20Modules/Capium_BK_3.0/src/test/resources/Feature_CapiumPurchase/BK_Tasks.feature:23)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1879578608", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1879578608'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;IsIncluded&apos;]//parent::label&quot;}
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [468607b250d353cd51122c232f39a5f0, findElement {using=xpath, value=//input[@name=&apos;IsIncluded&apos;]//parent::label}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51519}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51519/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 468607b250d353cd51122c232f39a5f0
+	at jdk.internal.reflect.GeneratedConstructorAccessor51.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.Capium.Actions.Capium_Bookkeeping_Task_Actions.TickIncludingVATCheckbox(Capium_Bookkeeping_Task_Actions.java:165)
+	at com.Capium.stepDefinations.Capium_Bookkeeping_Task_Stepdef.un_tick_the_checkbox_including_vat(Capium_Bookkeeping_Task_Stepdef.java:75)
+	at ✽.UnTick the checkbox Including VAT(file:///D:/Core%20Modules/Capium_BK_3.0/src/test/resources/Feature_CapiumPurchase/BK_Tasks.feature:23)
+</pre></div></td>
+<td>54</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify disposed functionality for leased", "Bookkeeping Fixed Assets"</td>
+<td><div><pre>java.lang.UnsupportedOperationException: You may not select a disabled option
+	at org.openqa.selenium.support.ui.Select.assertOptionIsEnabled(Select.java:321)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:313)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:195)
+	at com.Capium.Utilies.HelperClass.selectOptionByValue(HelperClass.java:224)
+	at com.Capium.Actions.Capium_Bookkeeping_FixedAssets_Actions.Clickondisposedinactiondropdownforleased(Capium_Bookkeeping_FixedAssets_Actions.java:395)
+	at com.Capium.stepDefinations.Capium_Bookkeeping_FixedAssests_Stepdef.click_on_disposed_in_action_dropdown_for_leased(Capium_Bookkeeping_FixedAssests_Stepdef.java:165)
+	at ✽.Click on disposed in action dropdown for leased(file:///D:/Core%20Modules/Capium_BK_3.0/src/test/resources/Feature_CapiumPurchase/BK_FixedAssets.feature:94)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1940783142", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1940783142'><pre>java.lang.UnsupportedOperationException: You may not select a disabled option
+	at org.openqa.selenium.support.ui.Select.assertOptionIsEnabled(Select.java:321)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:313)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:195)
+	at com.Capium.Utilies.HelperClass.selectOptionByValue(HelperClass.java:224)
+	at com.Capium.Actions.Capium_Bookkeeping_FixedAssets_Actions.Clickondisposedinactiondropdownforleased(Capium_Bookkeeping_FixedAssets_Actions.java:395)
+	at com.Capium.stepDefinations.Capium_Bookkeeping_FixedAssests_Stepdef.click_on_disposed_in_action_dropdown_for_leased(Capium_Bookkeeping_FixedAssests_Stepdef.java:165)
+	at ✽.Click on disposed in action dropdown for leased(file:///D:/Core%20Modules/Capium_BK_3.0/src/test/resources/Feature_CapiumPurchase/BK_FixedAssets.feature:94)
+</pre></div></td>
+<td>34</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Schedule_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Schedule_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Schedule functionality", "Schedule"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=137.0.7151.104)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85b717fe39299cdac2feaf35be88e8fe, clickElement {id=f.A73F38BF4910838ABA2AB8FA4C8136E7.d.A20A44F56A6B5BC1819929786EDC03FB.e.305}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52292}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52292/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (85b717fe39299cdac2feaf35be88e8fe)] -&gt; xpath: //a[text()=&apos;Minutes of Meetings&apos;]]
+Session ID: 85b717fe39299cdac2feaf35be88e8fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.Capium.Actions.Capium_Bookkeeping_Schedule_Actions.Validateschedule(Capium_Bookkeeping_Schedule_Actions.java:24)
+	at com.Capium.stepDefinations.Capium_Bookkeeping_Schedule_stepdef.validate_schedule(Capium_Bookkeeping_Schedule_stepdef.java:15)
+	at ✽.Validate schedule(file:///D:/Core%20Modules/Capium_BK_3.0/src/test/resources/Feature_CapiumPurchase/BK_Schedule.feature:11)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace195646359", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace195646359'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=137.0.7151.104)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85b717fe39299cdac2feaf35be88e8fe, clickElement {id=f.A73F38BF4910838ABA2AB8FA4C8136E7.d.A20A44F56A6B5BC1819929786EDC03FB.e.305}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52292}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52292/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (85b717fe39299cdac2feaf35be88e8fe)] -&gt; xpath: //a[text()=&apos;Minutes of Meetings&apos;]]
+Session ID: 85b717fe39299cdac2feaf35be88e8fe
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor91.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.Capium.Actions.Capium_Bookkeeping_Schedule_Actions.Validateschedule(Capium_Bookkeeping_Schedule_Actions.java:24)
+	at com.Capium.stepDefinations.Capium_Bookkeeping_Schedule_stepdef.validate_schedule(Capium_Bookkeeping_Schedule_stepdef.java:15)
+	at ✽.Validate schedule(file:///D:/Core%20Modules/Capium_BK_3.0/src/test/resources/Feature_CapiumPurchase/BK_Schedule.feature:11)
+</pre></div></td>
+<td>39</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Schedule_runfile@77f80c04</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify purchase drop down", "Bookkeeping CIS"</td>
+<td></td>
+<td>50</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Dividends filter", "BookkeepingModule-Task"</td>
+<td></td>
+<td>40</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Save and New button", "Bookkeeping Quick Entry"</td>
+<td></td>
+<td>47</td>
+<td>com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile@38102d01</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Budgeting", "BookkeepingModule-Task"</td>
+<td></td>
+<td>138</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Transactions of customer", "Reports"</td>
+<td></td>
+<td>38</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Subcontractor Contractor YTD Details Report", "Bookkeeping CIS"</td>
+<td></td>
+<td>51</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "supplier statement of supplier", "Reports"</td>
+<td></td>
+<td>71</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "nominal ledger of additional", "Reports"</td>
+<td></td>
+<td>43</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "day book of finanacials", "Reports"</td>
+<td></td>
+<td>45</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Purchase Edit Payments", "Bookkeeping Purchases"</td>
+<td></td>
+<td>42</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Bulk Edit", "BookkeepingModule-Task"</td>
+<td></td>
+<td>41</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Purchases Export", "Bookkeeping Purchases"</td>
+<td></td>
+<td>46</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Contacts_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Contacts_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add Supplier to Contacs", "Contacts"</td>
+<td></td>
+<td>75</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Contacts_runfile@37271612</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "transactions of supplier", "Reports"</td>
+<td></td>
+<td>37</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "cash and bank report of additional", "Reports"</td>
+<td></td>
+<td>42</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "customer list customer", "Reports"</td>
+<td></td>
+<td>35</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Purchase Dashboard", "Bookkeeping Purchases"</td>
+<td></td>
+<td>79</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify activate(disposed assest) functionality for tangble", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>32</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Journals Select PDF Action", "BookkeepingModule-Task"</td>
+<td></td>
+<td>46</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Journals Select Delete Action", "BookkeepingModule-Task"</td>
+<td></td>
+<td>39</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Journals Select Excel Action", "BookkeepingModule-Task"</td>
+<td></td>
+<td>36</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Edit and explain functionality for leased", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>42</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Dividends Search", "BookkeepingModule-Task"</td>
+<td></td>
+<td>35</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sell functionality for tangible", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>33</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify disposed functionality for tangible", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>49</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Edit and explain functionality for tangible", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>33</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Purchase Type dropdown", "Bookkeeping Purchases"</td>
+<td></td>
+<td>102</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invoice Select Actions Dropdown", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>95</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Sales Dashboard functionality", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>120</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify CIS dropdown after creating CIS purchase", "Bookkeeping CIS"</td>
+<td></td>
+<td>42</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Edit and explain functionality for intangible", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>45</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "budget reports of finanacials", "Reports"</td>
+<td></td>
+<td>37</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify QuickEntry Page", "Bookkeeping Quick Entry"</td>
+<td></td>
+<td>47</td>
+<td>com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile@38102d01</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Delete QuickEntry", "Bookkeeping Quick Entry"</td>
+<td></td>
+<td>39</td>
+<td>com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile@38102d01</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "debtors list of customer", "Reports"</td>
+<td></td>
+<td>38</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Recuring purchase", "Bookkeeping Purchases"</td>
+<td></td>
+<td>52</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Purchases Page", "Bookkeeping Purchases"</td>
+<td></td>
+<td>202</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "balance sheet of finanacials", "Reports"</td>
+<td></td>
+<td>38</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "comparative reports of finanacials", "Reports"</td>
+<td></td>
+<td>42</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify CIS Submission Report", "Bookkeeping CIS"</td>
+<td></td>
+<td>36</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Budgeting Edit Action", "BookkeepingModule-Task"</td>
+<td></td>
+<td>47</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "account details of additional", "Reports"</td>
+<td></td>
+<td>40</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify QuickEntry Page", "Bookkeeping Quick Entry"</td>
+<td></td>
+<td>45</td>
+<td>com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile@38102d01</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Purchase Payments", "Bookkeeping Purchases"</td>
+<td></td>
+<td>62</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "supplier list of supplier", "Reports"</td>
+<td></td>
+<td>36</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Fixed Assets page", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>27</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify CIS Invoice report", "Bookkeeping CIS"</td>
+<td></td>
+<td>48</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Sales Recurring Invoices", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>53</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify CIS dropdown", "Bookkeeping CIS"</td>
+<td></td>
+<td>54</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Dashboard_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Dashboard_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Dashboard functionality", "Bookkeeping dashboard"</td>
+<td></td>
+<td>81</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Dashboard_runfile@10aa41f2</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify disposed functionality for intangible", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>47</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify depreciation functionality", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>40</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invoices Type Satuts and Export", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>95</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify activate(sell assest) functionality for tangible", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>39</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify activate(disposed assest) functionality for leased", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>38</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Select Action dropdown in SubContractor", "Bookkeeping CIS"</td>
+<td></td>
+<td>43</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Contractor Settings", "Bookkeeping CIS"</td>
+<td></td>
+<td>48</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "adavance report customer", "Reports"</td>
+<td></td>
+<td>34</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify activate(sell assest) functionality for leased", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>36</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Recurring Select Actions", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>71</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify add tangble fixed assest in purchase", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>42</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Sales Recepits", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>105</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "sales product list of customer", "Reports"</td>
+<td></td>
+<td>39</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "trail balance of finanacials", "Reports"</td>
+<td></td>
+<td>36</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify add fixed assests redirection to purchase", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>34</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Purchase Import", "Bookkeeping Purchases"</td>
+<td></td>
+<td>59</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "sales invoice list of customer", "Reports"</td>
+<td></td>
+<td>37</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sell functionality for leased", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>36</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify activate(disposed assest) functionality for intangble", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>36</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Recuring Purchase Search", "Bookkeeping Purchases"</td>
+<td></td>
+<td>45</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "recent transaction of additional", "Reports"</td>
+<td></td>
+<td>41</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Budgeting Delete Action", "BookkeepingModule-Task"</td>
+<td></td>
+<td>38</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "customer ageing list of customer", "Reports"</td>
+<td></td>
+<td>34</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks Journals", "BookkeepingModule-Task"</td>
+<td></td>
+<td>98</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "purchase invoice list of supplier", "Reports"</td>
+<td></td>
+<td>45</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "customer statement of customer", "Reports"</td>
+<td></td>
+<td>42</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_ClientCreation_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_ClientCreation_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Client creation page", "ClientCreation"</td>
+<td></td>
+<td>48</td>
+<td>com.Capium.TestRunFiles.Capium_ClientCreation_runfile@3af9c5b7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Recuring Purchases", "Bookkeeping Purchases"</td>
+<td></td>
+<td>64</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Journals Select Copy Action", "BookkeepingModule-Task"</td>
+<td></td>
+<td>44</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "CapiScan", "Bookkeeping Purchases"</td>
+<td></td>
+<td>38</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "supplier ageing list of supplier", "Reports"</td>
+<td></td>
+<td>39</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Dividends", "BookkeepingModule-Task"</td>
+<td></td>
+<td>44</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Contacts_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Contacts_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add Shareholder to Contacts", "Contacts"</td>
+<td></td>
+<td>63</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Contacts_runfile@37271612</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Receipts Select Action", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>63</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "customer reciepts of customer", "Reports"</td>
+<td></td>
+<td>35</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Contacts_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Contacts_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add Customers to Contacts", "Contacts"</td>
+<td></td>
+<td>84</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Contacts_runfile@37271612</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Action dropdown in purchase", "Bookkeeping Purchases"</td>
+<td></td>
+<td>38</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Delete Row in QuickEntry", "Bookkeeping Quick Entry"</td>
+<td></td>
+<td>38</td>
+<td>com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile@38102d01</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Sales Invoices", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>120</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "payment to supplier of supplier", "Reports"</td>
+<td></td>
+<td>40</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "profit and loss of finanacials", "Reports"</td>
+<td></td>
+<td>34</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "cashflow of finanacials", "Reports"</td>
+<td></td>
+<td>39</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Purchase Payments", "Bookkeeping Purchases"</td>
+<td></td>
+<td>40</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify PDF download", "Bookkeeping Quick Entry"</td>
+<td></td>
+<td>38</td>
+<td>com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile@38102d01</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Edit and Add Row in QuickEntry", "Bookkeeping Quick Entry"</td>
+<td></td>
+<td>43</td>
+<td>com.Capium.TestRunFiles.Capium_BK_QuickEntry_runfile@38102d01</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "creditors list of supplier", "Reports"</td>
+<td></td>
+<td>37</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_CIS_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_CIS_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Edit in Select Action drop down in Add CIS Monthly Return", "Bookkeeping CIS"</td>
+<td></td>
+<td>55</td>
+<td>com.Capium.TestRunFiles.Capium_BK_CIS_runfile@6ab778a</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Quotation Select Action", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>93</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Sales Invoice dropdown", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>77</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Tasks_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Tasks_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task Journals Select Edit Action", "BookkeepingModule-Task"</td>
+<td></td>
+<td>57</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Tasks_runfile@37883b97</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_purchase_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_purchase_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Purchase Dashboard - Purchase summary", "Bookkeeping Purchases"</td>
+<td></td>
+<td>102</td>
+<td>com.Capium.TestRunFiles.Capium_BK_purchase_runfile@4c309d4d</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Sales_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Sales_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Sales Quotations", "BookkeepingModule-Sales"</td>
+<td></td>
+<td>70</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Sales_runfile@ed7f8b4</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reports dashboard", "Reports"</td>
+<td></td>
+<td>36</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify add intangble fixed assest in purchase", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>43</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_Login_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_Login_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login", "Login into Capium"</td>
+<td></td>
+<td>19</td>
+<td>com.Capium.TestRunFiles.Capium_Login_runfile@5c671d7f</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "sales report customer", "Reports"</td>
+<td></td>
+<td>33</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify add leased fixed assest in purchase", "Bookkeeping Fixed Assets"</td>
+<td></td>
+<td>45</td>
+<td>com.Capium.TestRunFiles.Capium_BK_FixedAssests_runfile@5c90e579</td></tr>
+<tr>
+<td title='com.Capium.TestRunFiles.Capium_BK_Reports_runfile.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.Capium_BK_Reports_runfile<br>Test method: Runs Cucumber Scenarios<br>Parameters: "purchase report of supplier", "Reports"</td>
+<td></td>
+<td>40</td>
+<td>com.Capium.TestRunFiles.Capium_BK_Reports_runfile@4e3958e7</td></tr>
+</table><p>
+</body>
+</html>
