@@ -3,7 +3,7 @@ package com.Capium.TestRunFiles;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features = "D:\\Core Modules\\Capium_BK_3.0\\src\\test\\resources\\Feature_CapiumPurchase\\ClientCreation.feature",
+@CucumberOptions(features = "D:\\Auto\\CapiumApplication\\Capium_BK_3.0\\src\\test\\resources\\Feature_CapiumPurchase\\ClientCreation.feature",
 
 		glue = { "com.Capium.stepDefinations" },tags="@Regression", plugin = { "pretty",
 				"html:target/cucumber-reports/CucumberReport.html", "json:target/cucumber-reports/CucumberReport.json",

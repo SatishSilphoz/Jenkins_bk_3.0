@@ -154,7 +154,7 @@ public class Capium_ClientCreation_Actions {
     WebDriver driver =HelperClass.getDriver();
     WebDriverWait wait=HelperClass.getWait();
 
-    String Filepath = "D:\\Core Modules\\Capium_BK_3.0\\src\\test\\resources\\Files\\ClientCreationData.xlsx";
+    String Filepath = "D:\\Auto\\CapiumApplication\\Capium_BK_3.0\\src\\test\\resources\\Files\\ClientCreationData.xlsx";
 
     public void ClientCreation() throws IOException, InterruptedException {
         FileInputStream file = new FileInputStream(Filepath);

@@ -120,6 +120,14 @@ public class HelperClass {
 
 	}
 	
+	public static void clickWhenVisibleAndClickable(WebElement element) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    wait.until(ExpectedConditions.visibilityOf(element));
+	    wait.until(ExpectedConditions.elementToBeClickable(element));
+	    element.click();
+	}
+
+	
 	public static boolean isElementPresentAndClickable(WebElement element) {
 	    try {
 	        return element != null && element.isDisplayed() && element.isEnabled();
