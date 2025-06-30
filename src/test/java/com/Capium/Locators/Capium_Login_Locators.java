@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class Capium_Login_Locators {
 
-	@FindBy(xpath = "//input[@id='txtusername']")
+	@FindBy(xpath = "//input[@id='txtusernameee']")
 	@CacheLookup
 	public WebElement inputUsername;
 
