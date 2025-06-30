@@ -87,3 +87,14 @@
 2025-06-27 19:09:35 [main] INFO  com.Capium.Utilies.Log - Clicked power-off icon for logout.
 2025-06-27 19:09:35 [main] INFO  com.Capium.Utilies.Log - Logout successful. Redirected to login page.
 2025-06-27 19:09:46 [main] INFO  com.Capium.Utilies.Log - Teardown complete.
+2025-06-30 11:31:49 [main] INFO  com.Capium.Utilies.Log - Driver setup successfully
+2025-06-30 11:31:50 [main] INFO  com.Capium.Utilies.Log - Scenario:User login
+2025-06-30 11:31:50 [main] INFO  com.Capium.Utilies.Log - Launch browser successfully.
+2025-06-30 11:31:51 [main] INFO  com.Capium.Utilies.Log - LRL entered successfully.
+2025-06-30 11:31:52 [main] INFO  com.Capium.Utilies.Log - Username and Password entered successfully.
+2025-06-30 11:31:57 [main] INFO  com.Capium.Utilies.Log - User Click on login button successfully.
+2025-06-30 11:32:09 [main] INFO  com.Capium.Utilies.Log - redirect to Bookkeeping module successfully.
+2025-06-30 11:32:09 [main] INFO  com.Capium.Utilies.Log - Scenario Passed.
+2025-06-30 11:32:11 [main] INFO  com.Capium.Utilies.Log - Clicked power-off icon for logout.
+2025-06-30 11:32:11 [main] INFO  com.Capium.Utilies.Log - Logout successful. Redirected to login page.
+2025-06-30 11:32:21 [main] INFO  com.Capium.Utilies.Log - Teardown complete.
